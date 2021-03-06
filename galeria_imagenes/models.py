@@ -15,8 +15,8 @@ class Album(models.Model):
 class Post(models.Model):     
     titulo=models.CharField(max_length= 50)       
  
-    contenido=models.CharField(max_length=100)      
-    imagen=models.ImageField(upload_to="blog",null=True,blank=True)    
+    contenido=models.CharField(max_length=100,blank=True,null=True)      
+    imagen=models.ImageField(upload_to="blog")    
          
     album=models.ManyToManyField(Album)  
     updated=models.DateTimeField(auto_now_add=True)    
