@@ -23,7 +23,8 @@ import users
 urlpatterns = [
     path('admin/', admin.site.urls),            
     path('home/',include('users.urls')),           
-    path('home/',include('galeria_imagenes.urls')),
+    path('home/',include('galeria_imagenes.urls')),            
+    path('home/',include('crud.urls'))
 ]
 if settings.DEBUG:    
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
